@@ -58,25 +58,6 @@ export default function Navbar() {
         </nav>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <button 
-            aria-label="Search" 
-            style={{ 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer', 
-              padding: '6px', 
-              color: 'inherit',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'var(--transition-fast)'
-            }}
-            onClick={() => alert('Search functionality coming soon!')}
-          >
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
-              <path d="M12.5 21C7.813 21 4 17.186 4 12.5 4 7.813 7.813 4 12.5 4c4.686 0 8.5 3.813 8.5 8.5 0 4.686-3.814 8.5-8.5 8.5Zm0-15A6.508 6.508 0 0 0 6 12.5c0 3.584 2.916 6.5 6.5 6.5s6.5-2.916 6.5-6.5S16.084 6 12.5 6Zm8.207 13.293-1.414 1.414 7 7 1.414-1.414-7-7Z"></path>
-            </svg>
-          </button>
           <Link href="/request-quote" className="btn btn-outline nav-cta">REQUEST QUOTE</Link>
         </div>
 

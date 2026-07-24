@@ -6,24 +6,24 @@ import Link from 'next/link';
 
 const TEASERS = [
   {
-    title: 'Buildings',
+    title: 'General Construction',
     img: '/about_hero.png',
     link: '/services',
   },
   {
-    title: 'Transportation & Infrastructure',
+    title: 'Road Construction',
     img: '/services_hero.png',
     link: '/services',
   },
   {
-    title: 'Commercial development',
+    title: 'Pre Construction',
     img: '/contact_hero.png',
     link: '/services',
   },
   {
-    title: 'Careers',
+    title: 'Design + Build',
     img: '/hero_architecture.png',
-    link: '/about',
+    link: '/services',
   },
 ];
 
@@ -160,6 +160,72 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What We Offer Section */}
+      <section id="what-we-offer" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+        <div className="container">
+          <div className="section-header" style={{ marginBottom: '50px' }}>
+            <div className="section-tag" style={{ color: 'var(--accent-orange)' }}>WHAT WE OFFER</div>
+            <h2 className="section-title" style={{ fontSize: '36px', color: 'var(--text-primary)', textTransform: 'none' }}>
+              Turn-Key Engineering &amp; Building Capabilities
+            </h2>
+            <p style={{ fontSize: '17px', color: 'var(--text-secondary)', fontWeight: 300, maxWidth: '680px', marginTop: '16px', lineHeight: '1.6' }}>
+              From initial geotechnical analysis to full structural delivery, Moasa Housing provides comprehensive construction services tailored to your project scope.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            <div className="service-card scroll-reveal">
+              <div className="service-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#006674" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                  <line x1="9" y1="6" x2="9" y2="6.01" />
+                  <line x1="15" y1="6" x2="15" y2="6.01" />
+                  <line x1="9" y1="18" x2="15" y2="18" />
+                </svg>
+              </div>
+              <h3 className="service-card-title">General Construction</h3>
+              <p className="service-card-desc">High-density apartments, commercial office towers, hotels, and industrial logistics facilities built with structural longevity.</p>
+            </div>
+
+            <div className="service-card scroll-reveal">
+              <div className="service-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#006674" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 19L8 5" />
+                  <path d="M16 5l4 14" />
+                  <line x1="12" y1="6" x2="12" y2="8" />
+                  <line x1="12" y1="16" x2="12" y2="19" />
+                </svg>
+              </div>
+              <h3 className="service-card-title">Road Construction</h3>
+              <p className="service-card-desc">Highways, estate access routes, sub-grade compaction, asphalt concrete paving, and reinforced drainage culverts.</p>
+            </div>
+
+            <div className="service-card scroll-reveal">
+              <div className="service-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#006674" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                </svg>
+              </div>
+              <h3 className="service-card-title">Pre Construction</h3>
+              <p className="service-card-desc">Site feasibility, geotechnical soil testing, quantity surveying, cost modeling, and regulatory permit compliance.</p>
+            </div>
+
+            <div className="service-card scroll-reveal">
+              <div className="service-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#006674" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                </svg>
+              </div>
+              <h3 className="service-card-title">Design + Build</h3>
+              <p className="service-card-desc">Single point of contract combining architecture, MEP engineering, interior fit-outs, and fast-track execution.</p>
+            </div>
           </div>
         </div>
       </section>
