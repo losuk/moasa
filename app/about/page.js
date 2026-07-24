@@ -6,24 +6,41 @@ import Link from 'next/link';
 
 const FOUNDATION_PILLARS = [
   {
-    num: '01 / SAFETY',
-    title: 'Uncompromising Safety',
-    desc: 'Enforcing a zero-harm site culture across every project. We protect our workers, clients, and local communities with stringent risk assessment protocols.',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#C59B27">
+        <path d="M21 3C10.5 3.5 4 10 3.5 20.5C5.5 20.5 10.5 19 14.5 15C18.5 11 20.5 6 21 3Z" />
+        <path d="M9 15L15 9" stroke="#FDF8EC" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    title: 'Field Offices & Sustainability',
+    desc: 'We have a set of sustainability standards for our offices and jobsites, including site-specific Indoor Air Quality, Construction Waste Management, and Pollution Prevention plans.',
   },
   {
-    num: '02 / QUALITY',
-    title: 'Structural Precision',
-    desc: 'Using premium materials, rigorous structural testing, and zero-defect craftsmanship to build enduring landmarks across residential and commercial sectors.',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#C59B27">
+        <path d="M6 18h12v2H6v-2zm9-6V7a3 3 0 0 0-6 0v5a4 4 0 0 0 2 3.46V17h2v-1.54A4 4 0 0 0 15 12zM9 7a2 2 0 1 1 4 0v1H9V7z"/>
+      </svg>
+    ),
+    title: 'Research & Innovation',
+    desc: 'We conduct research, pilot projects, and case studies to support the development and implementation of new technology and best practices in construction.',
   },
   {
-    num: '03 / SUSTAINABILITY',
-    title: 'Environmental Care',
-    desc: 'Integrating energy-efficient design, eco-conscious materials, and passive ventilation systems that minimize environmental impact and reduce lifecycle costs.',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#C59B27">
+        <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-5.45 8-12V5l-8-3z"/>
+      </svg>
+    ),
+    title: 'Culture of Safety',
+    desc: 'We recognize the right of our employees to a safe and healthy workplace. Our culture embraces the principle of Living Injury Free Everyday (L.I.F.E.) for all projects.',
   },
   {
-    num: '04 / INTEGRITY',
-    title: 'Cost & Time Certainty',
-    desc: 'Delivering transparent estimation, data-driven preconstruction planning, and strict milestone tracking — on budget, on time, every time.',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#C59B27">
+        <path d="M12 2l2.4 1.8 3-.2 1 2.8 2.8 1-.2 3 1.8 2.4-1.8 2.4.2 3-2.8 1-1 2.8-3-.2L12 22l-2.4-1.8-3 .2-1-2.8-2.8-1 .2-3L1.2 12l1.8-2.4-.2-3 2.8-1 1-2.8 3 .2L12 2z"/>
+      </svg>
+    ),
+    title: 'Certified Integrity',
+    desc: 'We get involved early in the visioning stage to give valuable input on costs, constructability, lead times, and life cycle issues, ensuring major cost savings and project success.',
   },
 ];
 
@@ -100,10 +117,10 @@ export default function AboutPage() {
               <div className="section-tag" style={{ color: 'var(--accent-orange)' }}>01 / WHO WE ARE</div>
               <h2 className="jumbotron-heading">A Premier East African Building &amp; Engineering Partner</h2>
               <p className="jumbotron-intro">
-                Moasa Housing, Renovations &amp; Constructions is a leading construction and project development company with active operations across Uganda, South Sudan, and Kenya. Headquartered on the 8th Floor of Communications House in Kampala, we deliver exceptional residential, commercial, and industrial developments from initial planning to turn-key delivery.
+                Moasa Housing, Renovations and Constructions is a dynamic, brisk company whose expertise lies in managing the construction process for renovating or building new facilities — from Healthcare to Commercial and Industrial markets. We commence by comprehending your project goals and budget constraints in their entirety. We then develop ingenious solutions to exceed your expectations.
               </p>
-              <p className="jumbotron-intro" style={{ marginTop: '-16px' }}>
-                We combine regional knowledge with international construction standards — ensuring that every residential flat, commercial complex, or civil highway network is built on time, on budget, and to the highest quality.
+              <p className="jumbotron-intro" style={{ marginTop: '16px' }}>
+                Our creative approach in consonance with our ability to bring a team of project-specific experts to your assignment whilst keeping costs in check forms the core of our Unique Selling Proposition.
               </p>
               <Link href="/contact" className="circle-bubble-btn">
                 <span>Contact Our Kampala Headquarters</span>
@@ -130,22 +147,22 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 2: OUR FOUNDATION */}
-      <section id="our-foundation" className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <section id="our-foundation" className="section-padding" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="container">
-          <div className="section-header" style={{ marginBottom: '40px' }}>
-            <div className="section-tag" style={{ color: 'var(--accent-orange)' }}>02 / OUR FOUNDATION</div>
-            <h2 className="section-title" style={{ fontSize: '36px', color: 'var(--text-primary)', textTransform: 'none' }}>
-              Built on core engineering principles
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <div className="section-tag" style={{ color: '#C59B27', letterSpacing: '0.15em', fontWeight: 800 }}>OUR FOUNDATION</div>
+            <h2 className="section-title" style={{ fontSize: 'clamp(32px, 4vw, 48px)', color: '#111111', textTransform: 'none', marginTop: '8px' }}>
+              Built on <span style={{ color: '#C59B27' }}>Excellence</span>
             </h2>
-            <p style={{ fontSize: '17px', color: 'var(--text-secondary)', fontWeight: 300, maxWidth: '640px', marginTop: '16px', lineHeight: '1.6' }}>
-              Our foundation rests on four unshakeable pillars. We believe that building for a better society means creating infrastructure that protects people and endures across generations.
+            <p style={{ fontSize: '17px', color: '#555555', fontWeight: 300, maxWidth: '680px', margin: '16px auto 0', lineHeight: '1.6' }}>
+              Our commitment to sustainability, innovation, safety, and integrity defines who we are.
             </p>
           </div>
 
           <div className="foundation-grid">
             {FOUNDATION_PILLARS.map((pillar, i) => (
               <div key={i} className="foundation-card scroll-reveal">
-                <div className="foundation-num">{pillar.num}</div>
+                <div className="foundation-icon-circle">{pillar.icon}</div>
                 <h3 className="foundation-title">{pillar.title}</h3>
                 <p className="foundation-desc">{pillar.desc}</p>
               </div>
