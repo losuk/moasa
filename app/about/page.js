@@ -46,24 +46,34 @@ const FOUNDATION_PILLARS = [
 
 const JOURNEY_STEPS = [
   {
-    year: '2004',
-    title: 'Founding in Kampala',
-    desc: 'Moasa Housing was established in Kampala, Uganda, focusing on residential construction and high-grade structural renovations.',
+    year: '2009',
+    title: 'Moasa Housing Founded',
+    desc: 'Established in Kampala, Uganda, with a vision to transform the construction industry.',
+    side: 'right',
   },
   {
-    year: '2010',
-    title: 'Commercial Expansion',
-    desc: 'Expanded operational capacity into corporate headquarters, mixed-use commercial developments, and structural steel framing.',
+    year: '2012',
+    title: 'First Major Project',
+    desc: 'Completed our first large-scale residential development, setting the standard for quality.',
+    side: 'left',
   },
   {
-    year: '2016',
-    title: 'Regional Footprint',
-    desc: 'Extended operations into South Sudan and Kenya, undertaking major highway civil infrastructure, stormwater networks, and multi-family complexes.',
+    year: '2015',
+    title: 'Expansion Into Commercial',
+    desc: 'Expanded our services to include commercial construction, delivering our first office complex.',
+    side: 'right',
   },
   {
-    year: 'Today',
-    title: 'Industry Leadership',
-    desc: 'Operating from Communications House in Kampala with 150+ completed developments, driving turn-key innovation across East Africa.',
+    year: '2018',
+    title: 'Sustainability Focus',
+    desc: 'Launched our sustainable building initiative, incorporating eco-friendly materials and practices.',
+    side: 'left',
+  },
+  {
+    year: '2024',
+    title: '370+ Projects Milestone',
+    desc: 'Celebrated completing over 370 projects with a growing portfolio of satisfied clients.',
+    side: 'right',
   },
 ];
 
@@ -172,24 +182,28 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 3: OUR JOURNEY */}
-      <section id="our-journey" className="section-padding" style={{ backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border)' }}>
+      <section id="our-journey" className="section-padding" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border)' }}>
         <div className="container">
-          <div className="section-header">
-            <div className="section-tag" style={{ color: 'var(--accent-orange)' }}>03 / OUR JOURNEY</div>
-            <h2 className="section-title" style={{ fontSize: '36px', color: 'var(--text-primary)', textTransform: 'none' }}>
-              Two decades of growth &amp; milestone developments
+          <div className="section-header" style={{ textAlign: 'center' }}>
+            <div className="section-tag" style={{ color: '#C59B27', letterSpacing: '0.15em', fontWeight: 800 }}>OUR JOURNEY</div>
+            <h2 className="section-title" style={{ fontSize: 'clamp(32px, 4vw, 48px)', color: '#111111', textTransform: 'none', marginTop: '8px' }}>
+              Milestones of Growth
             </h2>
-            <p style={{ fontSize: '17px', color: 'var(--text-secondary)', fontWeight: 300, maxWidth: '640px', marginTop: '16px', lineHeight: '1.6' }}>
-              From our origins as a local residential builder in Kampala to managing complex multi-regional infrastructure projects across 3 East African countries.
+            <p style={{ fontSize: '17px', color: '#555555', fontWeight: 300, maxWidth: '640px', margin: '16px auto 0', lineHeight: '1.6' }}>
+              From our founding in Kampala to completing over 370 projects across East Africa.
             </p>
           </div>
 
-          <div className="journey-timeline scroll-reveal">
+          <div className="journey-vertical-timeline scroll-reveal">
+            <div className="journey-line"></div>
             {JOURNEY_STEPS.map((step, i) => (
-              <div key={i} className="journey-step">
-                <div className="journey-year">{step.year}</div>
-                <h3 className="journey-title">{step.title}</h3>
-                <p className="journey-desc">{step.desc}</p>
+              <div key={i} className={`journey-item ${step.side}`}>
+                <div className="journey-node"></div>
+                <div className="journey-card">
+                  <div className="journey-year">{step.year}</div>
+                  <h3 className="journey-title">{step.title}</h3>
+                  <p className="journey-desc">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
