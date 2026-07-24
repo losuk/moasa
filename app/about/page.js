@@ -185,7 +185,7 @@ export default function AboutPage() {
       <section id="our-journey" className="section-padding" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border)' }}>
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center' }}>
-            <div className="section-tag" style={{ color: '#C59B27', letterSpacing: '0.15em', fontWeight: 800 }}>OUR JOURNEY</div>
+            <div className="section-tag" style={{ color: '#C59B27', letterSpacing: '0.15em', fontWeight: 800 }}>03 / OUR JOURNEY</div>
             <h2 className="section-title" style={{ fontSize: 'clamp(32px, 4vw, 48px)', color: '#111111', textTransform: 'none', marginTop: '8px' }}>
               Milestones of Growth
             </h2>
@@ -206,6 +206,35 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: BUILD WITH US */}
+      <section id="build-with-us" className="build-with-us-banner">
+        <div className="container">
+          <div className="build-with-us-card scroll-reveal">
+            <div className="build-with-us-content">
+              <div className="build-with-us-tag">BUILD WITH US</div>
+              <h2 className="build-with-us-heading">Ready to Build Your Next Landmark?</h2>
+              <p className="build-with-us-intro">
+                Partner with Moasa Housing to turn your vision into enduring reality. From concept planning to turn-key delivery, our engineering team brings high quality, speed, and budget certainty to your project.
+              </p>
+            </div>
+            <div className="build-with-us-actions">
+              <Link href="/request-quote" className="btn btn-primary">
+                Request A Quote
+              </Link>
+              <Link href="/contact" className="circle-bubble-btn">
+                <span>Get In Touch</span>
+                <div className="teaser-arrow-btn">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12,5 19,12 12,19" stroke="currentColor" fill="none" strokeWidth="2.5" />
+                  </svg>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
