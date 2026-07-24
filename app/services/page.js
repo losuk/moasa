@@ -6,7 +6,7 @@ import Link from 'next/link';
 const CATEGORIES = [
   {
     id: 'all',
-    label: 'All',
+    label: 'All Services',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
@@ -88,7 +88,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Site Feasibility & Soil Analysis',
     description: 'Comprehensive geotechnical surveys, land surveying, environmental assessments, and zoning analysis to establish project viability before any construction begins.',
-    notable: 'Nakasero Hill Commercial Complex, Entebbe Lakeside Residences',
   },
   {
     category: 'preconstruction',
@@ -100,7 +99,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Budget Planning & Cost Engineering',
     description: 'Detailed quantity surveying, BIM 3D cost modeling, value engineering, and guaranteed maximum price estimates for full financial transparency.',
-    notable: 'Kololo Heights Apartments, Jinja Industrial Park',
   },
   {
     category: 'preconstruction',
@@ -114,7 +112,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Permit Acquisition & Compliance',
     description: 'KCCA building permit processing, NEMA environmental certificates, structural integrity approvals, and full regulatory coordination across Uganda.',
-    notable: 'Kampala Business District Tower, Mukono Commercial Centre',
   },
   {
     category: 'design-build',
@@ -127,7 +124,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Architectural Design & Engineering',
     description: 'Complete architectural blueprinting, structural engineering, MEP systems design, and 3D visualization under a single integrated design team.',
-    notable: 'Bugolobi Premium Villas, Ntinda Mixed-Use Complex',
   },
   {
     category: 'design-build',
@@ -139,7 +135,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Turnkey Project Delivery',
     description: 'End-to-end single-source project execution from concept design through construction to final handover, eliminating coordination delays.',
-    notable: 'Muyenga Hilltop Residences, Lubowa Estate Development',
   },
   {
     category: 'design-build',
@@ -151,7 +146,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Interior Fit-Out & Finishing',
     description: 'Premium interior design execution, custom joinery, MEP finishing, flooring installations, and luxury material sourcing for turnkey spaces.',
-    notable: 'Serena Conference Centre Fit-Out, Kololo Executive Suites',
   },
   {
     category: 'general-construction',
@@ -167,7 +161,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Commercial & Residential Construction',
     description: 'High-end apartments, hotel complexes, office towers, and mixed-use developments built with structural longevity and architectural elegance.',
-    notable: 'Emin Pasha Hotel, Shaba Village Kenya',
   },
   {
     category: 'general-construction',
@@ -178,7 +171,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Hotel & Hospital Construction',
     description: 'Clean clinical facilities, outpatient blocks, specialized medical equipment installations, and luxury hospitality venues meeting international standards.',
-    notable: 'Moyo General Hospital, Emin Pasha Hotel',
   },
   {
     category: 'general-construction',
@@ -192,7 +184,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Educational & Industrial Construction',
     description: 'School campuses, training centers, agricultural leadership facilities, and industrial plants designed for functional efficiency and community impact.',
-    notable: 'KOICA Farmers\' Center, Ogoko & Apo Schools',
   },
   {
     category: 'road-construction',
@@ -207,7 +198,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Highway & Access Road Construction',
     description: 'Heavy earthmoving, sub-grade compaction, asphalt concrete paving, and reinforced rigid road surfaces for highways and estate access routes.',
-    notable: 'Juba-Nimule Highway Sections, Kampala Northern Bypass Access',
   },
   {
     category: 'road-construction',
@@ -220,7 +210,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Estate & Industrial Park Road Networks',
     description: 'Complete internal road networks for residential estates, industrial parks, and commercial developments including parking, kerbing, and signage.',
-    notable: 'Lubowa Estate Roads, Namanve Industrial Park Access',
   },
   {
     category: 'road-construction',
@@ -231,7 +220,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Drainage & Culvert Systems',
     description: 'Stormwater management channels, reinforced culverts, retaining walls, and erosion control systems engineered for tropical weather conditions.',
-    notable: 'Mukono District Drainage, Entebbe Municipal Culverts',
   },
   {
     category: 'project-management',
@@ -245,7 +233,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Site Supervision & Safety Management',
     description: 'Full-time on-site supervision, OSHA and Uganda building code compliance enforcement, safety audits, and incident prevention protocols.',
-    notable: 'All Active Moasa Project Sites',
   },
   {
     category: 'project-management',
@@ -259,7 +246,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Supply Chain & Material Logistics',
     description: 'Direct procurement of cement, steel, aggregate, and finishing materials with quarry-level relationships to secure pricing and guard against delays.',
-    notable: 'Tororo Cement Partnership, Mukono Quarry Supply Lines',
   },
   {
     category: 'project-management',
@@ -271,7 +257,6 @@ const SERVICE_CARDS = [
     ),
     title: 'Quality Assurance & Commissioning',
     description: 'Monthly milestone audits, structural integrity testing, budget tracking, punch-list management, and turnkey handoff coordination.',
-    notable: 'Moyo Hospital Commissioning, KOICA Center Handover',
   },
 ];
 
@@ -316,15 +301,29 @@ export default function ServicesPage() {
       {/* Subpage Banner */}
       <section className="subpage-hero services-page-hero">
         <div className="container">
-          <div className="section-tag">03 / CORE CAPABILITIES</div>
-          <h1 className="section-title">
-            OUR COMPREHENSIVE<br /><span className="text-accent">BUILD SERVICES</span>
+          <div className="section-tag" style={{ color: '#C59B27' }}>03 / CORE CAPABILITIES</div>
+          <h1 className="section-title" style={{ fontSize: 'clamp(38px, 5.5vw, 64px)', textTransform: 'none' }}>
+            Our Services
           </h1>
+          <p style={{ maxWidth: '640px', fontSize: '18px', lineHeight: '1.6', color: 'rgba(255, 255, 255, 0.9)', marginTop: '20px', fontWeight: 300 }}>
+            Comprehensive design, construction, and management services delivered with high precision, safety, and budget certainty across East Africa.
+          </p>
         </div>
       </section>
 
+      {/* Breadcrumb Navigation */}
+      <nav className="breadcrumbs-nav" aria-label="breadcrumb">
+        <div className="container">
+          <ol className="breadcrumbs-list">
+            <li><Link href="/">Home</Link></li>
+            <li className="breadcrumbs-separator">/</li>
+            <li style={{ color: 'var(--text-primary)' }}>Services</li>
+          </ol>
+        </div>
+      </nav>
+
       {/* Services Split Layout: Left Tabs + Right Cards */}
-      <section className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <section className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="container">
           <div className="services-split-layout">
 
@@ -352,9 +351,6 @@ export default function ServicesPage() {
                     </div>
                     <h3 className="service-card-title">{card.title}</h3>
                     <p className="service-card-desc">{card.description}</p>
-                    <div className="service-card-notable">
-                      <strong>Notable:</strong> {card.notable}
-                    </div>
                   </div>
                 ))}
               </div>
@@ -365,17 +361,30 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Action Banner */}
-      <section className="section-padding cta-section">
+      <section id="build-with-us" className="build-with-us-banner">
         <div className="container">
-          <div className="cta-container scroll-reveal">
-            <div className="section-tag">DISCUSS PARTNERSHIP</div>
-            <h2>HAVE A SCALE PROJECT IN MIND?</h2>
-            <p>
-              Submit your detailed requirements to our underwriting estimators for design-build pricing.
-            </p>
-            <Link href="/request-quote" className="btn btn-primary btn-large">
-              START ESTIMATION PROCESS
-            </Link>
+          <div className="build-with-us-card scroll-reveal">
+            <div className="build-with-us-content">
+              <div className="build-with-us-tag">DISCUSS PARTNERSHIP</div>
+              <h2 className="build-with-us-heading">Have a Scale Project in Mind?</h2>
+              <p className="build-with-us-intro">
+                Submit your detailed requirements to our underwriting estimators for design-build pricing and structural consultation.
+              </p>
+            </div>
+            <div className="build-with-us-actions">
+              <Link href="/request-quote" className="btn btn-primary">
+                Request A Quote
+              </Link>
+              <Link href="/contact" className="circle-bubble-btn">
+                <span>Contact Headquarters</span>
+                <div className="teaser-arrow-btn">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12,5 19,12 12,19" stroke="currentColor" fill="none" strokeWidth="2.5" />
+                  </svg>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
